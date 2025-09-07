@@ -121,6 +121,15 @@
   }
 }
 
+.bg-main {
+  background-color: #0072AB;
+  color: white;
+}
+.bg-main:hover {
+  background-color: #165c7e;
+  color: white;
+}
+
 
 .bb {
   border: 2px solid red;

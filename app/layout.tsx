@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Providers from "./providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Заменяем Geist на Inter (ближайший стандартный аналог SF Pro Text)
+// Для использования настоящего SF Pro Text нужна лицензия или загрузка через @next/font
+const inter = Inter({
+  variable: "--font-sf-pro-text",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -27,9 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
+        style={{ fontFamily: 'var(--font-sf-pro-text), system-ui, sans-serif' }}
       >
-        <Providers><Header/>{children}</Providers>
+        <Providers>
+          <Header/>
+          {children}
+        </Providers>
       </body>
     </html>
   );

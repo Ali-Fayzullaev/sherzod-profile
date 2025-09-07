@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/app/context/LangProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-
+import ButtonComponents from "./ButtonComponents";
 
 // shadcn/ui
 import { Button } from "@/components/ui/button";
@@ -34,7 +34,6 @@ import {
   Instagram,
   Youtube,
   Linkedin,
-  Music2,
 } from "lucide-react";
 
 import Image from "next/image";
@@ -80,8 +79,8 @@ export default function Header() {
               <SheetHeader className="p-4 border-b">
                 <SheetTitle className="text-left">
                  <Image
-                    width={26}
-                    height={26}
+                    width={36}
+                    height={36}
                     alt="Sherzod"
                     src={logo}
                  />
@@ -97,7 +96,7 @@ export default function Header() {
                       key={item.key}
                       href={item.href}
                       onClick={onNavClick}
-                      className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-blue-50 text-blue-700"
+                      className="flex items-center gap-3 px-3 py-2 rounded-lg font-light hover:bg-[#0072AB] hover:text-white text-[#888888]"
                     >
                       <item.icon className="h-5 w-5" />
                       <span className="font-medium">{item.label}</span>
@@ -110,22 +109,22 @@ export default function Header() {
                   <p className="text-sm text-muted-foreground mb-2">
                     {t("label.socials", "Социальные сети:")}
                   </p>
-                  <div className="flex items-center gap-3 text-slate-500">
-                    <a href="#" aria-label="Facebook" className="hover:text-slate-800">
-                      <Facebook className="h-5 w-5" />
+                  <div className="flex items-center gap-6 text-slate-500">
+                    <a href="#" aria-label="Facebook" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                      <Facebook className="h-6 w-6  " />
                     </a>
-                    <a href="#" aria-label="Instagram" className="hover:text-slate-800">
-                      <Instagram className="h-5 w-5" />
+                    <a href="#" aria-label="Instagram" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                      <Instagram className="h-6 w-6 " />
                     </a>
-                    <a href="#" aria-label="LinkedIn" className="hover:text-slate-800">
-                      <Linkedin className="h-5 w-5" />
+                    <a href="#" aria-label="LinkedIn" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                      <Linkedin className="h-6 w-6" />
                     </a>
-                    <a href="#" aria-label="YouTube" className="hover:text-slate-800">
-                      <Youtube className="h-5 w-5" />
+                    <a href="#" aria-label="YouTube" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                      <Youtube className="h-6 w-6" />
                     </a>
-                    <a href="#" aria-label="TikTok" className="hover:text-slate-800">
-                      <Music2 className="h-5 w-5" />
-                    </a>
+                    {/* <a href="#" aria-label="TikTok" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                      <Music2 className="h-6 w-6" />
+                    </a> */}
                   </div>
                 </div>
 
@@ -134,7 +133,7 @@ export default function Header() {
                   <p className="text-sm text-muted-foreground mb-2">
                     {t("label.language", "Язык")}
                   </p>
-                  <LanguageSwitcher compact={false} />
+                  <LanguageSwitcher/>
                 </div>
 
                 {/* CTA */}
@@ -150,7 +149,7 @@ export default function Header() {
                   <a
                     href="#contacts"
                     onClick={onNavClick}
-                    className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700"
+                    className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-main text-white"
                   >
                     {t("cta.contact", "Связаться")}
                   </a>
@@ -180,7 +179,7 @@ export default function Header() {
             <a
               key={item.key}
               href={item.href}
-              className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50"
+              className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-700 hover:bg-[#0072AB] hover:text-white"
             >
               {item.label}
             </a>
@@ -190,12 +189,7 @@ export default function Header() {
         {/* Right: язык + CTA */}
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
-          <a
-            href="#contacts"
-            className="hidden sm:inline-flex px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700"
-          >
-            {t("cta.contact", "Связаться")}
-          </a>
+          <ButtonComponents href="#contacts" label={t("cta.contact", "Связаться")}/>
         </div>
       </div>
     </header>
