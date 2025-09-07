@@ -2,15 +2,18 @@
 import { Button } from "@/components/ui/button";
 import { Phone, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export default function ButtonComponents({
   label,
+  className,
   Icon = Phone, // иконка по умолчанию
   href = "",
 }: {
   label: string;
   Icon?: LucideIcon; // или React.ElementType
   href?: string;
+  className?: string; 
 }) {
   return (
     <motion.div
@@ -23,7 +26,7 @@ export default function ButtonComponents({
       <Button
         asChild
         size="lg"
-        className=" font-normal   px-10 py-4  bg-main "
+        className={cn("h-11 px-6 rounded bg-main", className)}
       >
         <a
           href={href}
