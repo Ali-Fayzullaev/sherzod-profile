@@ -34,6 +34,7 @@ export default function Profile() {
         {/* Кнопка: 100% ширина на мобилке, авто на ≥sm */}
         <div className="mt-2">
           <ButtonComponents
+          href="/profile"
             label={t("button.learnmore", "Подробнее")}
             className="w-full sm:w-auto"
           />

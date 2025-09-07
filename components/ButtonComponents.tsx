@@ -16,13 +16,7 @@ export default function ButtonComponents({
   className?: string; 
 }) {
   return (
-    <motion.div
-      initial={{ scale: 0.9, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
+   
       <Button
         asChild
         size="lg"
@@ -37,6 +31,5 @@ export default function ButtonComponents({
            {label}
         </a>
       </Button>
-    </motion.div>
   );
 }

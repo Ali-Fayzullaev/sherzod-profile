@@ -2,13 +2,17 @@
 import Profile from "@/components/Profile";
 import { useLang } from "./context/LangProvider";
 import Hero from "@/components/Hero";
+import Activity from "@/components/Activity";
+import Partners from "@/components/Partners";
 
 export default function Page() {
   const { t } = useLang();
   return (
-    <div>
+    <div className="mb-100">
       <Hero/>
       <Profile/>
+      <Activity/>
+      <Partners/>
     </div>
   );
 }
