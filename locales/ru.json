@@ -1,0 +1,15 @@
+{
+  "label": { "language": "Язык", "socials": "Социальные сети:" },
+  "nav": {
+    "home": "Главная",
+    "profile": "Профайл",
+    "activity": "Деятельность",
+    "publications": "Публикации",
+    "partners": "Партнеры",
+    "diplomas": "Дипломы и сертификаты",
+    "awards": "Галерея наград",
+    "contacts": "Контакты"
+  },
+  "cta": { "contact": "Связаться", "download_resume": "Скачать резюме" },
+  "hero": { "full_name": "Пулатов Шерзод Аббозович", "last_name": "Аббозович" }
+}
