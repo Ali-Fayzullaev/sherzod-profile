@@ -36,9 +36,9 @@ export default function Partners() {
           {data.map((item, idx) => (
             <CarouselItem
               key={idx}
-              className="pl-2 md:pl-4 basis-full sm:basis-1/3 lg:basis-1/5"
+              className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5"
             >
-              <div className="mx-2 rounded-2xl border bg-white/80 backdrop-blur p-4 sm:p-5 flex items-center justify-center h-52 sm:h-56 md:h-40">
+              <div className="mx-2 p-4 sm:p-5 flex items-center justify-center h-52 sm:h-56 md:h-40">
                 <div className="relative w-full h-full">
                   <Image
                     src={item.img}
@@ -57,14 +57,6 @@ export default function Partners() {
         <CarouselPrevious className="left-0" />
         <CarouselNext className="right-0" />
       </Carousel>
-
-      <div className="mt-6">
-        <ButtonComponents
-          href="/activity"
-          label={t("button.learnmore", "Подробнее")}
-          className="w-full sm:w-auto"
-        />
-      </div>
     </section>
   );
 }
