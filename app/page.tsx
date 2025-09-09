@@ -11,7 +11,7 @@ import Awards from "@/components/Awards";
 export default function Page() {
   const { t } = useLang();
   return (
-    <div className="mb-100">
+    <div>
       <Hero/>
       <Profile/>
       <Activity/>
