@@ -4,6 +4,7 @@ import { useLang } from "./context/LangProvider";
 import Hero from "@/components/Hero";
 import Activity from "@/components/Activity";
 import Partners from "@/components/Partners";
+import Publications from "@/components/Publications";
 
 export default function Page() {
   const { t } = useLang();
@@ -13,6 +14,7 @@ export default function Page() {
       <Profile/>
       <Activity/>
       <Partners/>
+      <Publications/>
     </div>
   );
 }
