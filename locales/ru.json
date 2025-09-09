@@ -48,6 +48,7 @@
   },
   "partners": {"title": "Партнеры"},
   "diplomas": {"title": "Дипломы и сертификаты"},
+  "awards": {"title": "Галерея наград"},
   "publications": {
     "learnmore": "Другие публикации",
     "title": "Публикации",

@@ -19,26 +19,26 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
 };
 
-export default function Diplomas() {
+export default function Awards() {
   const { t } = useLang();
 
   // Картинки положи в /public/activity/ с расширениями
   const data: Item[] = [
     {
-      img: "/сertificates/certificates1.png",
+      img: "/awards/awards1.png",
     },
     {
-      img: "/сertificates/certificates2.jpg",
+      img: "/awards/awards2.png",
     },
     {
-      img: "/сertificates/certificates3.jpg",
+      img: "/awards/award3.png",
     },
   ];
 
   return (
     <section className="w-full max-w-7xl mx-auto my-10 mt-15">
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
-        {t("diplomas.title")}
+        {t("awards.title")}
       </h2>
       <motion.div
         variants={fadeUp}
@@ -63,7 +63,7 @@ export default function Diplomas() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-0" />
+        <CarouselPrevious className="left-0 " />
         <CarouselNext className="right-0" />
       </Carousel>
     </section>
