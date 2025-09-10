@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function ButtonComponents({
   label,
@@ -22,14 +23,13 @@ export default function ButtonComponents({
         size="lg"
         className={cn("h-11 px-6 rounded bg-main", className)}
       >
-        <a
+        <Link
           href={href}
-          target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3"
         >
            {label}
-        </a>
+        </Link>
       </Button>
   );
 }

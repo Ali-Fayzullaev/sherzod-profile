@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Providers from "./providers";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 
 // Заменяем Geist на Inter (ближайший стандартный аналог SF Pro Text)
 // Для использования настоящего SF Pro Text нужна лицензия или загрузка через @next/font
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header/>
+          <Hero/>
           {children}
           <Footer/>
         </Providers>
