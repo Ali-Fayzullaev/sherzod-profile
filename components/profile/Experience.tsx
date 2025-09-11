@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLang } from "@/app/context/LangProvider";
 import {
   Accordion,
@@ -28,9 +27,6 @@ export default function Experience() {
                   <div>
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
                     <div className="mt-2 h-1 w-14 rounded bg-[#0b76ad]" />
-                  </div>
-                  <div className="hidden sm:block relative w-24 h-24 -mt-6">
-                    <Image src={cap} alt="" fill className="object-contain" priority />
                   </div>
                 </div>
               </AccordionTrigger>

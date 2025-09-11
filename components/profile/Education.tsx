@@ -59,7 +59,7 @@ export default function Education() {
                             {/* ОДНА точка у линии (md+) */}
                             <span
                               className={`hidden md:block absolute top-2 ${
-                                isLeft ? "right-[-6px]" : "left-[-6px]"
+                                isLeft ? "right-[-6px]" : "left-[-6px] "
                               } h-3 w-3 rounded-full bg-sky-600 ring-4 ring-white`}
                             />
                             <div className="text-slate-900">
