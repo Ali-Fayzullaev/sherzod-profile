@@ -25,9 +25,6 @@ import {
   UserRound,
   Activity,
   BookOpenText,
-  GraduationCap,
-  Award,
-  Users,
   Phone,
   Download,
   Facebook,
@@ -49,16 +46,34 @@ export default function Header() {
   const { t, lang } = useLang();
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const logo =  "/activity/activity1.png";
+  const logo = "/activity/activity1.png";
+  // внутри Header.tsx
   const nav: NavItem[] = [
-    { key: "home", href: "#home", icon: Home, label: t("nav.home", "Главная") },
-    { key: "profile", href: "#profile", icon: UserRound, label: t("nav.profile", "Профайл") },
-    { key: "activity", href: "#activity", icon: Activity, label: t("nav.activity", "Деятельность") },
-    { key: "publications", href: "#publications", icon: BookOpenText, label: t("nav.publications", "Публикации") },
-    // { key: "partners", href: "#partners", icon: Users, label: t("nav.partners", "Партнеры") },
-    // { key: "diplomas", href: "#diplomas", icon: GraduationCap, label: t("nav.diplomas", "Дипломы и сертификаты") },
-    // { key: "awards", href: "#awards", icon: Award, label: t("nav.awards", "Галерея наград") },
-    { key: "contacts", href: "#contacts", icon: Phone, label: t("nav.contacts", "Контакты") },
+    { key: "home", href: "/", icon: Home, label: t("nav.home", "Главная") },
+    {
+      key: "profile",
+      href: "/profile",
+      icon: UserRound,
+      label: t("nav.profile", "Профайл"),
+    },
+    {
+      key: "activity",
+      href: "/activity",
+      icon: Activity,
+      label: t("nav.activity", "Деятельность"),
+    },
+    {
+      key: "publications",
+      href: "/#publications",
+      icon: BookOpenText,
+      label: t("nav.publications", "Публикации"),
+    },
+    {
+      key: "contacts",
+      href: "/#contacts",
+      icon: Phone,
+      label: t("nav.contacts", "Контакты"),
+    },
   ];
 
   const onNavClick = () => setOpen(false);
@@ -78,12 +93,7 @@ export default function Header() {
             <SheetContent side="left" className="w-[320px] p-0">
               <SheetHeader className="p-4 border-b">
                 <SheetTitle className="text-left">
-                 <Image
-                    width={36}
-                    height={36}
-                    alt="Sherzod"
-                    src={logo}
-                 />
+                  <Image width={36} height={36} alt="Sherzod" src={logo} />
                 </SheetTitle>
               </SheetHeader>
 
@@ -110,16 +120,32 @@ export default function Header() {
                     {t("label.socials", "Социальные сети:")}
                   </p>
                   <div className="flex items-center gap-6 text-slate-500">
-                    <a href="#" aria-label="Facebook" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                    <a
+                      href="#"
+                      aria-label="Facebook"
+                      className=" rounded-2xl  bg-[#888888] text-white p-1"
+                    >
                       <Facebook className="h-6 w-6  " />
                     </a>
-                    <a href="#" aria-label="Instagram" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                    <a
+                      href="#"
+                      aria-label="Instagram"
+                      className=" rounded-2xl  bg-[#888888] text-white p-1"
+                    >
                       <Instagram className="h-6 w-6 " />
                     </a>
-                    <a href="#" aria-label="LinkedIn" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                    <a
+                      href="#"
+                      aria-label="LinkedIn"
+                      className=" rounded-2xl  bg-[#888888] text-white p-1"
+                    >
                       <Linkedin className="h-6 w-6" />
                     </a>
-                    <a href="#" aria-label="YouTube" className=" rounded-2xl  bg-[#888888] text-white p-1">
+                    <a
+                      href="#"
+                      aria-label="YouTube"
+                      className=" rounded-2xl  bg-[#888888] text-white p-1"
+                    >
                       <Youtube className="h-6 w-6" />
                     </a>
                     {/* <a href="#" aria-label="TikTok" className=" rounded-2xl  bg-[#888888] text-white p-1">
@@ -133,7 +159,7 @@ export default function Header() {
                   <p className="text-sm text-muted-foreground mb-2">
                     {t("label.language", "Язык")}
                   </p>
-                  <LanguageSwitcher/>
+                  <LanguageSwitcher />
                 </div>
 
                 {/* CTA */}
@@ -165,31 +191,29 @@ export default function Header() {
           </Sheet>
 
           {/* Логотип / имя */}
-          <Image
-                    width={56}
-                    height={56}
-                    alt="Sherzod"
-                    src={logo}
-                 />
+          <Image width={56} height={56} alt="Sherzod" src={logo} />
         </div>
 
         {/* Center: десктоп нав */}
         <nav className="hidden md:flex items-center gap-3">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.key}
               href={item.href}
               className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-700 hover:bg-[#0072AB] hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* Right: язык + CTA */}
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
-          <ButtonComponents href="#contacts" label={t("cta.contact", "Связаться")}/>
+          <ButtonComponents
+            href="#contacts"
+            label={t("cta.contact", "Связаться")}
+          />
         </div>
       </div>
     </header>
