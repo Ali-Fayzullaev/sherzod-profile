@@ -7,78 +7,73 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { items } from "@/lib/edication";
+import { Plus, X } from "lucide-react";
+
+type ItemProp = {
+  title: string;
+  note: string;
+};
 
 export default function Experience() {
   const { t } = useLang();
 
   const title = t("experience.title", "Трудовой стаж");
-  const cap = "/cap.png";
+
+  const items: ItemProp[] = [
+    { title: t("profile.experience.noteTitle1"), note: t("profile.experience.note1") },
+    { title: t("profile.experience.noteTitle2"), note: t("profile.experience.note2") },
+    { title: t("profile.experience.noteTitle3"), note: t("profile.experience.note3") },
+  ];
 
   return (
-    <section id="education" className="py-10">
+    <section id="experience" className="py-10">
       <div className="container mx-auto py-4">
         <div className="rounded border bg-white/70 backdrop-blur shadow-sm overflow-hidden">
-          <Accordion type="single" collapsible defaultValue="edu">
-            <AccordionItem value="edu" className="border-0">
-              {/* Заголовок */}
+          <Accordion type="single" collapsible defaultValue="exp">
+            <AccordionItem value="exp" className="border-0">
+              {/* Заголовок + кнопка (Plus/X) */}
               <AccordionTrigger className="px-6 sm:px-8 py-5 md:py-6 hover:no-underline">
-                <div className="flex items-start justify-between w-full gap-6">
+                <div className="flex items-center justify-between w-full gap-6">
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+                      {title}
+                    </h2>
                     <div className="mt-2 h-1 w-14 rounded bg-[#0b76ad]" />
                   </div>
                 </div>
               </AccordionTrigger>
 
               <AccordionContent className="px-6 sm:px-8 pb-8 md:pb-10">
-                {/* --- ТОЛЬКО область таймлайна --- */}
-                <div className="relative">
-                  {/* обёртка для линии, чтобы она не заходила на note */}
-                  <div className="relative">
-                    {/* центральная линия (только md+) */}
-                    <div
-                      className="hidden md:block pointer-events-none absolute left-1/2 top-0 bottom-0 w-px bg-slate-200"
-                      aria-hidden
-                    />
-                    <ul className="grid gap-8 md:grid-cols-2 md:gap-x-10">
-                      {items.map((it, idx) => {
-                        const side = it.side || (idx % 2 === 0 ? "left" : "right");
-                        const isLeft = side === "left";
-                        return (
-                          <li
-                            key={idx}
-                            className={`relative ${
-                              isLeft ? "md:pr-8" : "md:pl-8"
-                            } border-b border-slate-200/80 pb-6 last:pb-0 last:border-none md:border-none`}
-                          >
-                            {/* ОДНА точка у линии (md+) */}
-                            <span
-                              className={`hidden md:block absolute top-2 ${
-                                isLeft ? "right-[-6px]" : "left-[-6px]"
-                              } h-3 w-3 rounded-full bg-sky-600 ring-4 ring-white`}
-                            />
-                            <div className="text-slate-900">
-                              <div className="font-semibold">{it.year}</div>
-                              {it.html ? (
-                                <p
-                                  className="mt-1 text-slate-600 leading-relaxed"
-                                  dangerouslySetInnerHTML={{ __html: it.html }}
-                                />
-                              ) : (
-                                <p className="mt-1 text-slate-600 leading-relaxed">{it.text}</p>
-                              )}
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
+                {/* Левая линия + один круг вверху */}
+                <div className="relative pl-6">
+                  {/* вертикальная линия — только в области таймлайна */}
+                  <span
+                    aria-hidden
+                    className="absolute left-0 top-2 bottom-0 w-px bg-blue-600"
+                  />
+                  {/* один маркер вверху линии */}
+                  <span
+                    aria-hidden
+                    className="absolute left-0 top-0 -translate-x-[6px] h-5 w-5 rounded-full bg-sky-600 ring-4 ring-white"
+                  />
 
-                  {/* Примечание — линия до сюда НЕ доходит */}
-                  <p className="text-sm mt-8 md:mt-10 text-slate-600 leading-relaxed">
-                    {t("education.note")}
-                  </p>
+                  <div className="space-y-6">
+                    {items.map((item, index) => (
+                      <div key={index}>
+                        <div className="font-semibold text-slate-900">{item.title}</div>
+                        <div className="text-slate-600">{item.note}</div>
+                      </div>
+                    ))}
+
+                    <div>
+                      <div className="text-[#0072AB] font-bold mt-1 mb-2">
+                        {t("profile.experience.noteTitleMain")}
+                      </div>
+                      <div className="text-slate-900">
+                        {t("profile.experience.noteMain")}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </AccordionContent>
             </AccordionItem>
