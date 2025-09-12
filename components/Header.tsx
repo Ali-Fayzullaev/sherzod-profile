@@ -93,7 +93,13 @@ export default function Header() {
             <SheetContent side="left" className="w-[320px] p-0">
               <SheetHeader className="p-4 border-b">
                 <SheetTitle className="text-left">
-                  <Image width={36} height={36} alt="Sherzod" className=" rounded-3xl" src={logo} />
+                  <Image
+                    width={36}
+                    height={36}
+                    alt="Sherzod"
+                    className=" rounded-3xl"
+                    src={logo}
+                  />
                 </SheetTitle>
               </SheetHeader>
 
@@ -188,7 +194,13 @@ export default function Header() {
           </Sheet>
 
           {/* Логотип / имя */}
-          <Image width={56} height={56} alt="Sherzod" className="rounded-4xl" src={logo} />
+          <Image
+            width={56}
+            height={56}
+            alt="Sherzod"
+            className="rounded-4xl"
+            src={logo}
+          />
         </div>
 
         {/* Center: десктоп нав */}

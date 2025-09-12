@@ -22,9 +22,9 @@ export default function Diplomas() {
   const { t } = useLang();
 
   const data: Item[] = [
-    { img: "/certificates/certificates1.png" },
-    { img: "/certificates/certificates2.jpg" },
-    { img: "/certificates/certificates3.jpg" },
+    { img: "/сertificates/certificates1.png" },
+    { img: "/сertificates/certificates2.jpg" },
+    { img: "/сertificates/certificates3.jpg" },
   ];
 
   return (

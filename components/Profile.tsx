@@ -16,7 +16,7 @@ export default function Profile() {
   return (
     <section className="px-4 py-8 sm:px-6 md:px-8">
       <div className="container mx-auto ">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight bb">
           {t("profile.title")}
         </h2>
 
