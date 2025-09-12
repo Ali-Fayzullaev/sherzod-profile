@@ -31,7 +31,7 @@ export default function Partners() {
       </h2>
       <div className="mt-2 h-1 w-14 rounded bg-[#0b76ad]" />
 
-      <Carousel className="mt-5">
+      <Carousel className="mt-4 sm:mt-5 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg">
         <CarouselContent className="-ml-2 md:-ml-4">
           {data.map((item, idx) => (
             <CarouselItem
@@ -54,8 +54,30 @@ export default function Partners() {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="left-0" />
-        <CarouselNext className="right-0" />
+        <CarouselPrevious
+          aria-label="Prev"
+          className="
+      !left-auto !right-14          
+      !-top-10 sm:!-top-12 lg:!-top-16
+      !-translate-y-0             
+      z-10 h-9 w-9 rounded-full
+      bg-white/90 text-blue-600 border-2 border-blue-600 shadow
+      ring-1 ring-slate-200 hover:bg-white
+      focus-visible:ring-2 focus-visible:ring-sky-500
+    "
+        />
+        <CarouselNext
+          aria-label="Next"
+          className="
+      !right-2
+      !-top-10 sm:!-top-12 lg:!-top-16
+      !-translate-y-0
+      z-10 h-9 w-9 rounded-full
+      bg-white/90 text-blue-600 border-2 border-blue-600 shadow
+      ring-1 ring-slate-200 hover:bg-white
+      focus-visible:ring-2 focus-visible:ring-sky-500
+    "
+        />
       </Carousel>
     </section>
   );
