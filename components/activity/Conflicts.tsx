@@ -1,82 +1,80 @@
 "use client";
 
 import { useLang } from "@/app/context/LangProvider";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+import ButtonComponents from "../ButtonComponents";
+import AreasText from "./AreasText";
 
-type ItemProp = {
-  title: string;
-  note: string;
+type Note = { title: string; text: string | string[] };
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
 };
 
-export default function Experience() {
+export default function Conflicts() {
   const { t } = useLang();
 
-  const title = t("experience.title", "Трудовой стаж");
-
-  const items: ItemProp[] = [
-    { title: t("profile.experience.noteTitle1"), note: t("profile.experience.note1") },
-    { title: t("profile.experience.noteTitle2"), note: t("profile.experience.note2") },
-    { title: t("profile.experience.noteTitle3"), note: t("profile.experience.note3") },
-  ];
+  const raw = t("activitypage.note_conflicts") as unknown;
+  const notes: Note[] = Array.isArray(raw) ? (raw as Note[]) : [];
 
   return (
-    <section id="experience" className="py-10">
-      <div className="container mx-auto py-4">
-        <div className="rounded border bg-white/70 backdrop-blur shadow-sm overflow-hidden">
-          <Accordion type="single" collapsible defaultValue="exp">
-            <AccordionItem value="exp" className="border-0">
-              {/* Заголовок + кнопка (Plus/X) */}
-              <AccordionTrigger className="px-6 sm:px-8 py-5 md:py-6 hover:no-underline">
-                <div className="flex items-center justify-between w-full gap-6">
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-                      {title}
-                    </h2>
-                    <div className="mt-2 h-1 w-14 rounded bg-[#0b76ad]" />
-                  </div>
-                </div>
-              </AccordionTrigger>
+    <section className="px-4 py-8 sm:px-6 md:px-8">
+      <div className="container mx-auto">
+        <AreasText/>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
+          {t("activitypage.title_conflicts")}
+        </h2>
 
-              <AccordionContent className="px-6 sm:px-8 pb-8 md:pb-10">
-                {/* Левая линия + один круг вверху */}
-                <div className="relative pl-6">
-                  {/* вертикальная линия — только в области таймлайна */}
-                  <span
-                    aria-hidden
-                    className="absolute left-0 top-2 bottom-0 w-px bg-blue-600"
-                  />
-                  {/* один маркер вверху линии */}
-                  <span
-                    aria-hidden
-                    className="absolute left-0 top-0 -translate-x-[6px] h-5 w-5 rounded-full bg-sky-600 ring-4 ring-white"
-                  />
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          className="mt-2 sm:mt-3 h-0.5 w-12 sm:w-14 rounded bg-[#0b76ad]"
+        />
 
-                  <div className="space-y-6">
-                    {items.map((item, index) => (
-                      <div key={index}>
-                        <div className="font-semibold text-slate-900">{item.title}</div>
-                        <div className="text-slate-600">{item.note}</div>
-                      </div>
-                    ))}
+        <ul className="mt-4 space-y-2" role="list">
+          {notes.map((n, i) => {
+            const parts = Array.isArray(n.text) ? n.text : [n.text];
+            return (
+              <li
+                key={i}
+                className="relative pl-5 text-[#888888] leading-relaxed"
+              >
+                <span
+                  aria-hidden
+                  className="absolute left-0 top-[0.85em] -translate-y-1/2 text-[#888888]"
+                >
+                  –
+                </span>
 
-                    <div>
-                      <div className="text-[#0072AB] font-bold mt-1 mb-2">
-                        {t("profile.experience.noteTitleMain")}
-                      </div>
-                      <div className="text-slate-900">
-                        {t("profile.experience.noteMain")}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+                <strong className="text-[#888888] font-bold">
+                  {n.title}
+                </strong>
+                {parts.length > 0 && parts[0] && (
+                  <>
+                    : <span>{parts[0]}</span>
+                  </>
+                )}
+
+                {parts.slice(1).map((p, idx) => (
+                  <p key={idx} className="mt-1 text-slate-700">
+                    {p}
+                  </p>
+                ))}
+              </li>
+            );
+          })}
+        </ul>
+        <div className="mt-4">
+          <ButtonComponents
+            href="#contacts"
+            label={t(
+              "activitypage.buttonNameCta",
+              "Записаться на консультацию"
+            )}
+            className="w-full sm:w-auto"
+          />
         </div>
       </div>
     </section>

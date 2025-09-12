@@ -13,23 +13,30 @@ type ItemProp = {
   note: string;
 };
 
-export default function Experience() {
+export default function Courses() {
   const { t } = useLang();
 
-  const title = t("experience.title", "Трудовой стаж");
+  const title = t(
+    "activitypage.courses.title",
+    "Услуги по организации и проведению обучающих курсов и семинар-тренингов:"
+  );
 
   const items: ItemProp[] = [
     {
-      title: t("profile.experience.noteTitle1"),
-      note: t("profile.experience.note1"),
+      title: t("activitypage.courses.paragraphTitle1"),
+      note: t("activitypage.courses.paragraph1"),
     },
     {
-      title: t("profile.experience.noteTitle2"),
-      note: t("profile.experience.note2"),
+      title: t("activitypage.courses.paragraphTitle2"),
+      note: t("activitypage.courses.paragraph2"),
     },
     {
-      title: t("profile.experience.noteTitle3"),
-      note: t("profile.experience.note3"),
+      title: t("activitypage.courses.paragraphTitle3"),
+      note: t("activitypage.courses.paragraph3"),
+    },
+    {
+      title: t("activitypage.courses.paragraphTitle4"),
+      note: t("activitypage.courses.paragraph4"),
     },
   ];
 
@@ -39,7 +46,6 @@ export default function Experience() {
         <div className="rounded border bg-white/70 backdrop-blur shadow-sm overflow-hidden">
           <Accordion type="single" collapsible defaultValue="exp">
             <AccordionItem value="exp" className="border-0">
-              {/* Заголовок + кнопка (Plus/X) */}
               <AccordionTrigger className="px-6 sm:px-8 py-5 md:py-6 hover:no-underline">
                 <div className="flex items-center justify-between w-full gap-6">
                   <div>
@@ -52,14 +58,11 @@ export default function Experience() {
               </AccordionTrigger>
 
               <AccordionContent className="px-6 sm:px-8 pb-8 md:pb-10">
-                {/* Левая линия + один круг вверху */}
                 <div className="relative pl-6">
-                  {/* вертикальная линия — только в области таймлайна */}
                   <span
                     aria-hidden
                     className="absolute left-0 top-2 bottom-0 w-px bg-blue-600"
                   />
-                  {/* один маркер вверху линии */}
                   <span
                     aria-hidden
                     className="absolute -left-1 top-0 -translate-x-[6px] h-5 w-5 rounded-full bg-sky-600 ring-4 ring-white"
@@ -68,21 +71,12 @@ export default function Experience() {
                   <div className="space-y-6">
                     {items.map((item, index) => (
                       <div key={index}>
-                        <div className="font-semibold text-slate-900">
+                        <div className="font-bold text-[#888888]">
                           {item.title}
                         </div>
                         <div className="text-slate-600">{item.note}</div>
                       </div>
                     ))}
-
-                    <div>
-                      <div className="text-[#0072AB] font-bold mt-1 mb-2">
-                        {t("profile.experience.noteTitleMain")}
-                      </div>
-                      <div className="text-slate-900">
-                        {t("profile.experience.noteMain")}
-                      </div>
-                    </div>
                   </div>
                 </div>
               </AccordionContent>
