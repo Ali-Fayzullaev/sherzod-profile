@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { useLang } from "@/app/context/LangProvider";
+import ButtonComponents from "./ButtonComponents";
 
 type Item = { img: string; alt?: string };
 
@@ -64,6 +65,13 @@ export default function Partners() {
           className="!right-2 !-top-10 sm:!-top-12 lg:!-top-16 !-translate-y-0 z-10 h-9 w-9 rounded-full bg-white/90 text-blue-600 border-2 border-blue-600 shadow"
         />
       </Carousel>
+      <div className="mt-14">
+        <ButtonComponents
+          href="#contacts"
+          label={t("activitypage.buttonNameCta", "Записаться на консультацию")}
+          className="w-full sm:w-auto"
+        />
+      </div>
     </section>
   );
 }

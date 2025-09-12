@@ -111,7 +111,7 @@ export default function Publications() {
 
       <div className="mt-2">
         <ButtonComponents
-          href="/publications"
+          href="/activity#publications"
           label={t(
             "publications.learnmore",
             t("publication.learnmore", "Другие публикации")

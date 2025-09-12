@@ -8,37 +8,34 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AreasText from "./AreasText";
+import ButtonComponents from "../ButtonComponents";
 
 type ItemProp = {
   title: string;
   note: string;
 };
 
-export default function Courses() {
+export default function Consultations() {
   const { t } = useLang();
 
   const title = t(
-    "activitypage.courses.title",
-    "Услуги по организации и проведению обучающих курсов и семинар-тренингов:"
+    "activitypage.consultations.title",
+    "Консультации в рамках исламского права (шариата):"
   );
 
   const items: ItemProp[] = [
     {
-      title: t("activitypage.courses.paragraphTitle1"),
-      note: t("activitypage.courses.paragraph1"),
+      title: t("activitypage.consultations.paragraphTitle1"),
+      note: t("activitypage.consultations.paragraph1"),
     },
     {
-      title: t("activitypage.courses.paragraphTitle2"),
-      note: t("activitypage.courses.paragraph2"),
+      title: t("activitypage.consultations.paragraphTitle2"),
+      note: t("activitypage.consultations.paragraph2"),
     },
     {
-      title: t("activitypage.courses.paragraphTitle3"),
-      note: t("activitypage.courses.paragraph3"),
-    },
-    {
-      title: t("activitypage.courses.paragraphTitle4"),
-      note: t("activitypage.courses.paragraph4"),
-    },
+      title: t("activitypage.consultations.paragraphTitle3"),
+      note: t("activitypage.consultations.paragraph3"),
+    }
   ];
 
   return (
@@ -72,7 +69,7 @@ export default function Courses() {
 
                   <div className="space-y-6">
                     {items.map((item, index) => (
-                      <div key={index}>
+                      <div key={index} className="mb-13">
                         <div className="font-bold text-[#888888]">
                           {item.title}
                         </div>
@@ -80,10 +77,22 @@ export default function Courses() {
                       </div>
                     ))}
                   </div>
+                  <div className="mt-4">
+                    <ButtonComponents
+                      href="#contacts"
+                      label={t(
+                        "activitypage.buttonNameCta",
+                        "Записаться на консультацию"
+                      )}
+                      className="w-full sm:w-auto"
+                    />
+                  </div>
                 </div>
+                
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+           
         </div>
       </div>
     </section>
