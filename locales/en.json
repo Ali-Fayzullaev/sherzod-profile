@@ -1,6 +1,172 @@
 {
-    "label": { "language": "Language" },
-    "nav": { "home": "Home", "profile": "Profile" },
-    "cta": { "contact": "Contact" }
+  "label": { "language": "Language", "socials": "Social networks:" },
+  "nav": {
+    "home": "Home",
+    "profile": "Profile",
+    "activity": "Activity",
+    "publications": "Publications",
+    "partners": "Partners",
+    "diplomas": "Diplomas & Certificates",
+    "awards": "Awards Gallery",
+    "contacts": "Contacts"
+  },
+  "button": { "learnmore": "Learn more" },
+  "cta": { "contact": "Contact", "download_resume": "Download résumé" },
+  "hero": {
+    "full_name": "Sherzod Pulatov",
+    "roles": [
+      "PhD (Doctor of Philosophy)",
+      "Professional mediator-practitioner",
+      "International affairs expert",
+      "Consultant in Islamic law",
+      "Lecturer"
+    ],
+    "tagline": "PhD holder, professional mediator-practitioner, international expert, consultant in Islamic law, lecturer of training courses and seminars.",
+    "mission_label": "My life mission:",
+    "life_mission": "To attain the pleasure of the Almighty through obedience and worship.",
+    "cta_contact": "Contact",
+    "photo": "hero1.png",
+    "bg": "hero2.png",
+    "socials": {
+      "facebook": "",
+      "instagram": "",
+      "linkedin": "",
+      "youtube": "",
+      "tiktok": "",
+      "telegram": ""
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "text": "Chairman of the Republican Council on Mediation under the Assembly of the People of Kazakhstan (APK) of the Administration of the President of the Republic of Kazakhstan and, since 2022, a member of the National Council (Ulttyq Quryltai) under the President of the Republic of Kazakhstan; since 2023, a member of the APK Council and the Public Council under the Ministry of Culture and Information of the Republic of Kazakhstan. Previously, from 2017 to 2022, a member of the Public Council under the Ministry of Foreign Affairs of the Republic of Kazakhstan; in 2017–2019, a member of the National Commission for the implementation of the Program for the Modernization of Public Consciousness under the President of the Republic of Kazakhstan and the republican commission under the Ministry of Education and Science; a member of the APK Scientific-Expert Council since 2017; a member of the APK and Chairman of the Uzbek Ethnocultural Center of Astana since 2010; a member of the Amanat party since 2009; and a public figure since 2007.",
+    "education": {
+      "note": "Author of over 200 journalistic articles and several scholarly works on interethnic, intercultural and legal topics related to dispute resolution, mediation, Islamic jurisprudence and law. Actively engaged in the development and strengthening of the APK institute of ethnomediation. Author and reviewer of several methodological guides on ethnomediation. Fluent in Kazakh, Russian, Uzbek, English and Arabic; conversational in Urdu, Turkish and Persian."
+    },
+    "experience": {
+      "title": "Work experience",
+      "noteTitle1": "2023 — present (expert consulting and teaching).",
+      "note1": "Project lead at the APK for developing the institute of ethnomediation; organizer and trainer of seminars and trainings in mediation, interethnic relations, civic (CR) and government relations (GR), as well as Islamic law and finance (Islamic banking). Provide support for commercial and social projects with foreign participation. Expert consultant to the N. Nazarbayev Center for the Development of Interfaith and Intercivilizational Dialogue of the Committee for Religious Affairs, Ministry of Culture and Information of the Republic of Kazakhstan, and deliver individual Arabic language courses.",
+      "noteTitle2": "2007 — present (public and political activity).",
+      "note2": "Alongside primary employment, have actively participated in the public life of the capital and the country since 2007. Since 2010 — Chairman of the Uzbek Ethnocultural Center of Astana and Deputy for the city of Astana of the Association of Ethnocultural Public Associations of Uzbeks of Kazakhstan “Dostlik”. From April 2019 to November 2020 — by order of the President of the Republic of Kazakhstan — Deputy Chairman of the Assembly of the People of Kazakhstan, chaired by the President of the Republic of Kazakhstan. Since 2022 — Chairman of the Republican Council on Ethnomediation of the APK under the Administration of the President.",
+      "noteTitle3": "2011 — 2022 (analytical and managerial roles).",
+      "note3": "After moving to the capital, worked across various fields, progressing from expert roles to managerial positions. In 2011 — Chief Expert for license issuance at JSC “Executive Directorate of the 7th Winter Asian Games”; in 2014 — Head of the Department for the Study of Islam at the “Research and Analytical Center” of the Agency for Religious Affairs of the Republic of Kazakhstan; in 2015 — Head of the Department for Coordination of Scientific Research and Interaction with the APK Scientific-Expert Council at the “Qogamdyk Kelisim” under the President. In 2017–2018 — expert on religious issues (Islamic studies) at the Association of Centers for the Study of Religion. In 2018 — Executive Director of the International Center for Law and Mediation “Soglasie”; in 2019 — human rights consultant and participant in the QORGAU project (Eurasian Expert Council, Astana). In 2020–2021 — Deputy Director of the Department of Legal Support and International Cooperation of the Federation of Trade Unions of the Republic of Kazakhstan; in 2022 — Head/Dean of the Youth and Sports Center at Astana Medical University.",
+      "noteTitleMain": "1999 — 2010 (career beginnings and leadership of commercial entities).",
+      "noteMain": "Began the career in 1998 during studies as an intern—assistant to the Consul at the Embassy of the Republic of Kazakhstan in the Islamic Republic of Iran, working in translation and consular registration. After graduation in 2001, joined the Agency for External Migration Issues of the Ministry of Labour and Social Protection of the Population of the Republic of Uzbekistan as a lead specialist of the International Department. In 2003–2004 — lead specialist-lawyer at the Zhambyl Region Tax Committee; subsequently held managerial positions in manufacturing and commercial enterprises: 2004–2008 — General Director of the manufacturing company TarazKozhObuv LLP and the commercial company KazSnabService LLP; 2008–2010 — Financial Director and Regional Director (Astana) of the manufacturing company Turk-Cement LLP."
+    },
+    "commendations": {
+      "title": "Awards & commendations",
+      "note": "2010 — Medal “Pride of Society” of the Association of Public Associations of Uzbeks of Kazakhstan “Dostlik”; Presidential Medal “20 Years of Independence”. 2015 — Medal “20 Years of the APK”. 2016 — APK Gold Medal “Birlik”. 2020 — Medal “25 Years of the APK”, APK Medal “Meiirim”, Medal “Dostlik”. 2021 — Medal “30 Years of Independence of the Republic of Kazakhstan”, APK Medal “Zhomart Zhan”, a jubilee medal for contribution to education of the Republic of Kazakhstan, and the Gold Medal of the Assembly of the Peoples of Russia. 2022 — State award “Yeren Enbek Ushin”. 2023 — APK badge of honor “Alǵys” (“Gratitude”) and the “Friendship of Peoples” Medal of the Council of Ministers of the Republic of Uzbekistan. 2024 — TURKSOY Medal for contribution to the culture and arts of the Turkic world, as well as letters of appreciation and certificates from the President of the Republic of Kazakhstan, government bodies and public organizations."
+    }
+  },
+  "activity": {
+    "title": "Activity",
+    "text1": "Conflict resolution, mediation and negotiations",
+    "text2": "Organizing and conducting training courses and seminar-workshops",
+    "text3": "Consultations in Islamic law (Sharia)"
+  },
+  "partners": { "title": "Partners" },
+  "diplomas": { "title": "Diplomas & Certificates" },
+  "awards": { "title": "Awards Gallery" },
+  "publications": {
+    "learnmore": "More publications",
+    "title": "Publications",
+    "text1": "We discuss this with Sherzod Pulatov, Chairman of the Uzbek Ethnocultural Center of Astana.",
+    "text2": "In an interview with NUR.KZ, Sherzod Pulatov, Chairman of the Uzbek Ethnocultural Center of Astana, emphasized...",
+    "text3": "Over 800,000 Kazakhs live in Uzbekistan; the two states are strategic partners.",
+    "titleText1": "Principles of good-neighborliness and mutual respect have always been...",
+    "titleText2": "Sherzod Pulatov: Partnership and trust foster the development of Kazakhstan and Uzbekistan...",
+    "titleText3": "Diplomacy, trade, culture — an interview with Sherzod Pulatov on relations with Uzbekistan..."
+  },
+  "contacts": {
+    "title": "Contacts",
+    "address": "26 Momyshuly St., office 17 (House of Friendship), Astana, Republic of Kazakhstan",
+    "email": "pulatovs@mail.ru",
+    "phone": "+7 (701) 162-78-00",
+    "label": {
+      "address": "Address:",
+      "email": "Email:",
+      "phone": "Tel/WhatsApp:",
+      "socials": "Social networks:"
+    },
+    "socials": {
+      "facebook": "",
+      "instagram": "",
+      "linkedin": "",
+      "youtube": "",
+      "tiktok": "",
+      "telegram": ""
+    }
+  },
+  "activitypage": {
+    "discription_conflicts": "Areas of activity",
+    "title_conflicts": "Services in conflict resolution, mediation and negotiations:",
+    "note_conflicts": [
+      {
+        "title": "Commercial (business) mediation",
+        "text": "Assistance in resolving business disputes related to contracts, performance of obligations, and disputes between partners."
+      },
+      {
+        "title": "Real estate mediation",
+        "text": "Settlement of disputes in purchase–sale and lease, as well as inheritance-related issues."
+      },
+      {
+        "title": "Labor dispute mediation",
+        "text": "Resolving conflicts between employers and employees, disputes over dismissals and working conditions."
+      },
+      {
+        "title": "Mediation in intercultural and interfaith conflicts",
+        "text": "Resolving disputes based on religious differences, cultural features, traditions and customs; fostering peaceful coexistence and mutual understanding between various religious and cultural communities."
+      },
+      {
+        "title": "Ethnomediation",
+        "text": "Resolving conflicts between representatives of different ethnic groups at household, social or political levels; seeking compromise in situations involving discrimination, bias or cultural differences."
+      },
+      {
+        "title": "International mediation",
+        "text": "Settling conflicts between parties from different jurisdictions, including international business disputes."
+      }
+    ],
+    "buttonNameCta": "Book a consultation",
+    "courses": {
+      "title": "Services for organizing and conducting training courses and seminar-workshops:",
+      "paragraphTitle1": "Mediator training courses:",
+      "paragraph1": "The “General Course in Mediation” program, consisting of lecture and practical modules, is developed in accordance with Article 9 of the Law of the Republic of Kazakhstan “On Mediation” and is intended to train professional mediators. Duration — 50 hours.",
+      "paragraphTitle2": "“Specialized Course in Mediation”",
+      "paragraph2": "Designed for those who have completed the “General Course in Mediation”. Aims to develop knowledge and skills of mediators and to apply mediation technologies needed for professional practice, including specializations such as commercial (business) mediation, mediation in education, and mediation in interethnic and interfaith conflicts. Duration — 50 hours.",
+      "paragraphTitle3": "Partners:",
+      "paragraph3": "National Council (Ulttyq Quryltai) (https://quryltai.kz/ru/members), Council on Ethnomediation of the Assembly of the People of Kazakhstan (https://assembly.kz/ru/struktury-ank/mediatsiya-ank/), RSE “Qogamdyk Kelisim” (taplink.cc/43428) and the Ethnomediation Center of the Institute for Applied Ethnopolitical Research (https://iaer.kz/) under the Ministry of Culture and Information, the Public Association “International Bureau of Mediation” (https://ibmediation.kz/), the Republican Public Association “International Center for Legal Aid — Sodействие и право” (https://centrsip.kz/), and others.",
+      "paragraphTitle4": "Other educational courses:",
+      "paragraph4": "— “Course in Civic (CR) and Government (GR) Relations”: 2 to 50 hours depending on client needs. — “Course in Islamic Financial Law”: lecture and practical modules covering sector legislation and Islamic banking instruments (murabaha, ijara, musharaka, mudaraba, takaful); 2 to 50 hours depending on needs. — “Course on Rules of Qur’anic Recitation (Tajwid)”: individual basis, from one month and longer as required. — “Arabic Language Course”: individual basis; study of the six parts of “Al-‘Arabiyyatu li-n-Naashiin” (https://www.youtube.com/watch?v=Kc-3ZAxO79U) with an intensive one-year track."
+    },
+    "consultations": {
+      "title": "Consultations in Islamic law (Sharia):",
+      "paragraphTitle1": "Financial law (Islamic economics):",
+      "paragraph1": "— Islamic banking: consultations on financing, credit and investment without interest (riba); structuring transactions in accordance with Islamic norms (murabaha, ijara, musharaka, mudaraba). — Business conduct: complying with Sharia norms in contracts, commercial transactions and investments (excluding prohibited activities such as alcohol, gambling, etc.). — Zakat and sadaqah: guidance on obligatory and voluntary alms, their calculation and distribution.",
+      "paragraphTitle2": "Ethical and moral issues:",
+      "paragraph2": "Advice on everyday ethics, conduct, personal relationships, integrity in affairs and compliance with Sharia norms. Assistance in resolving disputes and conflicts in line with Islamic ethical principles.",
+      "paragraphTitle3": "International relations and Islamic law:",
+      "paragraph3": "Legal consultations for Muslims living in non-Muslim countries to observe Sharia norms within local legislation. Support for foreign companies and translation services from Arabic and English."
+    },
+    "morepublication": {
+      "title": "Publications",
+      "title1": "Kazakhstan — a land of peace and harmony",
+      "note1": "For Kazakhstan, Korea is a reliable strategic partner. President Kassym-Jomart Tokayev stated this at a meeting with the Korean President. Yoon Suk Yeol paid a state visit to our country.",
+      "title2": "Sherzod Pulatov: Partnership and trust foster the development of Kazakhstan and Uzbekistan",
+      "note2": "In an interview with NUR.KZ, Sherzod Pulatov, Chairman of the Uzbek Ethnocultural Center of Astana, emphasized that relations between Kazakhstan and Uzbekistan are strengthening, demonstrating good-neighborliness and comprehensive partnership. Read more:",
+      "title3": "Diplomacy, trade, culture — an interview with Sherzod Pulatov on relations with Uzbekistan",
+      "note3": "More than 800,000 Kazakhs live in Uzbekistan, and 370 schools provide instruction in the Kazakh language. The two states are strategic partners. Kazakhstan accounts for 9.3% of Uzbekistan’s total trade. On the areas of economic and cultural cooperation, Sherzod Pulatov — Chairman of the Uzbek Ethnocultural Center in Astana, Head of the APK Mediation Council, member of the National Council under the President and the Public Council of the Ministry of Culture and Information — spoke in an interview with Kazinform.",
+      "title4": "Korea and Kazakhstan seek leadership in their regions — Sherzod Pulatov",
+      "note4": "For Kazakhstan, Korea is a reliable strategic partner. President Kassym-Jomart Tokayev stated this at a meeting with the Korean President. Yoon Suk Yeol paid a state visit to our country.",
+      "title5": "Chairman of the Board of the N. Nazarbayev Center met with the Chairman of the “Uzbek Ethnocultural Center of Astana” PA",
+      "note5": "Chairman of the Board of the N. Nazarbayev Center B. Sarsenbayev met with Sherzod Pulatov, Chairman of the “Uzbek Ethnocultural Center of Astana” public association.",
+      "title6": "Kazakhstan — a land of peace and harmony",
+      "note6": "The uniqueness of the Kazakh mindset lies not only in offering a helping hand in difficult times, but also in uniting various ethnicities and confessions under one shanyrak, creating an atmosphere of friendship and giving everyone warmth and peace of mind. Thanks to these human qualities, many peoples have survived, adopting and nurturing mutual respect, understanding and support; while preserving their traditions, language and religion, they live and prosper in Kazakhstan.",
+      "title7": "Contemporary relations of good-neighborliness",
+      "note7": "The principles of good-neighborliness and mutual respect have always distinguished Eastern peoples. Embedded in the relations between Kazakhstan and Uzbekistan, they serve as an example of friendship not only for Central Asia but also for the global community. Diplomatic relations between the independent Republics of Kazakhstan and Uzbekistan were established on November 23, 1992.",
+      "title8": "Policy of friendship and good-neighborliness",
+      "note8": "— Mr. Pulatov, in your view, how are cultural ties between Kazakhstan and Uzbekistan developing today? — Diplomatic relations between the two countries were established on November 23, 1992.",
+      "title9": "“The Uzbek is my brother.” The brotherhood of Kazakhs and Uzbeks",
+      "note9": "“The Uzbek is my brother, and the ‘Sart’ my true companion,” our ancestors said with respect about their Uzbek brethren. Today, historians acknowledge the shared history of the two brotherly peoples, reports BAQ.KZ."
+    }
   }
-  
+}

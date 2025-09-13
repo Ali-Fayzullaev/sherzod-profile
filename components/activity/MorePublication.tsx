@@ -77,7 +77,7 @@ export default function MorePublication() {
   ];
 
   return (
-    <section id="experience" className="py-10">
+    <section id="publications" className="py-10">
       <div className="container mx-auto py-4">
         <div className="rounded border bg-white/70 backdrop-blur shadow-sm overflow-hidden">
           <Accordion type="single" collapsible defaultValue="exp">
@@ -97,7 +97,7 @@ export default function MorePublication() {
               <AccordionContent className="px-6 sm:px-8 pb-8 md:pb-10">
                 {/* Левая линия + один круг вверху */}
                 <div className="relative pl-6">
-                  <Carousel className="mt-4 sm:mt-5 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg">
+                  <Carousel className="mt-14 sm:mt-5 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg">
                     <CarouselContent className="-ml-2 sm:-ml-4">
                       {data.map((item, idx) => (
                         <CarouselItem

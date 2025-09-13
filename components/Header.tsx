@@ -34,6 +34,7 @@ import {
 } from "lucide-react";
 
 import Image from "next/image";
+import LanguageMobile from "./LanguageMobile";
 
 type NavItem = {
   key: string;
@@ -162,7 +163,7 @@ export default function Header() {
                   <p className="text-sm text-muted-foreground mb-2">
                     {t("label.language", "Язык")}
                   </p>
-                  <LanguageSwitcher />
+                  <LanguageMobile />
                 </div>
 
                 {/* CTA */}
