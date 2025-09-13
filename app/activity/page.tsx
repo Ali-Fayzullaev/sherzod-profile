@@ -1,5 +1,6 @@
 import Conflicts from "@/components/activity/Conflicts";
 import Consultations from "@/components/activity/Consultations";
+import MorePublication from "@/components/activity/MorePublication";
 import Courses from "@/components/activity/Сourses";
 import ButtonComponents from "@/components/ButtonComponents";
 import Partners from "@/components/Partners";
@@ -12,7 +13,8 @@ export default function ActivityPage() {
       <Courses/>
       <Partners/>
       <Consultations/>
-      <Publications/>
+      <MorePublication/>
+
     </>
   );
 }
