@@ -48,7 +48,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const logo = "/activity/activity1.png";
-  // внутри Header.tsx
+
   const nav: NavItem[] = [
     { key: "home", href: "/", icon: Home, label: t("nav.home", "Главная") },
     {
@@ -82,9 +82,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50  w-full bg-white/80 backdrop-blur border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-3">
-        {/* Left: burger + brand */}
         <div className="flex items-center gap-3">
-          {/* Mobile burger */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" aria-label="Open menu">
@@ -104,9 +102,7 @@ export default function Header() {
                 </SheetTitle>
               </SheetHeader>
 
-              {/* Offcanvas body */}
               <div className="p-4 flex flex-col gap-4">
-                {/* Нав */}
                 <nav className="space-y-1">
                   {nav.map((item) => (
                     <Link
@@ -120,8 +116,6 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
-
-                {/* Соцсети */}
                 <div>
                   <p className="text-sm text-muted-foreground mb-2">
                     {t("label.socials", "Социальные сети:")}
@@ -157,8 +151,6 @@ export default function Header() {
                     </a>
                   </div>
                 </div>
-
-                {/* Переключатель языка */}
                 <div className="pt-1">
                   <p className="text-sm text-muted-foreground mb-2">
                     {t("label.language", "Язык")}
@@ -166,7 +158,6 @@ export default function Header() {
                   <LanguageMobile />
                 </div>
 
-                {/* CTA */}
                 <div className="mt-2 grid gap-2">
                   <a
                     href="/docs/resume.pdf"
@@ -194,7 +185,6 @@ export default function Header() {
             </SheetContent>
           </Sheet>
 
-          {/* Логотип / имя */}
           <Image
             width={56}
             height={56}
@@ -204,7 +194,6 @@ export default function Header() {
           />
         </div>
 
-        {/* Center: десктоп нав */}
         <nav className="hidden md:flex items-center gap-3">
           {nav.map((item) => (
             <Link
@@ -217,7 +206,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Right: язык + CTA */}
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <ButtonComponents

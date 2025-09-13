@@ -29,7 +29,6 @@ export default function Awards() {
 
   return (
     <section className="w-full max-w-7xl mx-auto my-10 mt-15 px-3 sm:px-0">
-      {/* ↑ на мобилке добавили боковые отступы: px-3; на ≥sm убираем */}
 
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
         {t("awards.title")}
@@ -42,7 +41,6 @@ export default function Awards() {
       />
 
       <Carousel className="mt-4 sm:mt-5 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg">
-        {/* Гаттеры внутри ленты + небольшой внешний «воздух» сохраняется за счёт px-3 у секции */}
         <CarouselContent className="-ml-2 sm:-ml-4">
           {data.map((item, idx) => (
             <CarouselItem
@@ -63,7 +61,6 @@ export default function Awards() {
           ))}
         </CarouselContent>
 
-        {/* Стрелки над каруселью справа */}
         <CarouselPrevious
           aria-label="Prev"
           className="

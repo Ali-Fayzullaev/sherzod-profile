@@ -30,7 +30,6 @@ export default function Activity() {
 
   return (
     <section className="w-full max-w-7xl mx-auto my-10 px-3 sm:px-0">
-      {/* ↑ на мобилке оставляем маленькие поля слева/справа */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
         {t("activity.title")}
       </h2>
@@ -59,13 +58,11 @@ export default function Activity() {
                     priority={idx === 0}
                   />
 
-                  {/* Оверлей: более читабельный градиент снизу */}
                   <div
                     aria-hidden
                     className="absolute inset-0 bg-gradient-to-t from-[#0072AB]/85 via-black/15 to-transparent"
                   />
 
-                  {/* Текст внутри фото */}
                   <div className="absolute inset-x-0 bottom-0 p-4">
                     <p className="text-white text-sm sm:text-[15px] font-medium leading-snug drop-shadow-md line-clamp-2">
                       {item.label}
@@ -77,7 +74,6 @@ export default function Activity() {
           ))}
         </CarouselContent>
 
-        {/* Стрелки — сверху справа, над каруселью */}
         <CarouselPrevious
           aria-label="Prev"
           className="!left-auto !right-14 !-top-10 sm:!-top-12 lg:!-top-16 !-translate-y-0 z-10 h-9 w-9 rounded-full bg-white/90 text-blue-600 border-2 border-blue-600 shadow"

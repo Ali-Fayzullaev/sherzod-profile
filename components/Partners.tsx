@@ -26,7 +26,6 @@ export default function Partners() {
 
   return (
     <section className="w-full max-w-7xl mx-auto my-10 px-3 sm:px-0">
-      {/* ↑ на мобилке немного воздуха слева/справа */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
         {t("partners.title", "Партнёры")}
       </h2>
@@ -55,7 +54,6 @@ export default function Partners() {
           ))}
         </CarouselContent>
 
-        {/* Стрелки — над каруселью справа */}
         <CarouselPrevious
           aria-label="Prev"
           className="!left-auto !right-14 !-top-10 sm:!-top-12 lg:!-top-16 !-translate-y-0 z-10 h-9 w-9 rounded-full bg-white/90 text-blue-600 border-2 border-blue-600 shadow"

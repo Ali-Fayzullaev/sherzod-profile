@@ -16,7 +16,6 @@ export default function LanguageSwitcher({ compact = true }: Props) {
 
   return (
     <div className="flex items-center">
-      {/* Мобильный круглый тоггл — циклический RU → KZ → EN */}
       {compact && (
         <button
           onClick={next}
@@ -29,8 +28,6 @@ export default function LanguageSwitcher({ compact = true }: Props) {
           {lang.toUpperCase()}
         </button>
       )}
-
-      {/* ≥ md: сегментный контрол с «пилюлей» */}
       <div
         className="relative ml-2 hidden md:flex items-center gap-1 rounded-full
                    bg-[#eaf0ff] ring-1 ring-[#0776AD]/20 p-1"
@@ -38,7 +35,6 @@ export default function LanguageSwitcher({ compact = true }: Props) {
         aria-label={t("label.language")}
         style={{ width: 210 }}
       >
-        {/* Плавающий индикатор (1/3 ширины контейнера) */}
         <motion.div
           layout
           layoutId="langPill"

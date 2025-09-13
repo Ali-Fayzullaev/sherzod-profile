@@ -33,15 +33,13 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative overflow-hidden">
-      {/* Фон + оверлей */}
       <div className="absolute inset-0">
         <img src={`/${bg}`} alt="" className="w-full h-full object-cover" aria-hidden />
         <div className="absolute inset-0 bg-[#0b76ad]/80" />
       </div>
 
-      {/* GRID: на мобиле 1 колонка (A→B→C), на md — 2 колонки, C встанет под A */}
       <div className="relative container mx-auto px-4 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-center">
-        {/* A) Текст */}
+    
         <div className="text-white order-1">
           <motion.h1 variants={fadeUp} initial="hidden" animate="show" className="text-3xl md:text-5xl font-medium leading-tight">
             {fullName}
@@ -66,14 +64,12 @@ export default function Hero() {
           )}
         </div>
 
-        {/* B) Фото */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35 }}
           className="justify-self-end order-2"
         >
-          {/* Чуть увеличим визуально и дадим адаптивную ширину */}
           <Image
             src={`/${photo}`}
             alt={fullName}
@@ -84,7 +80,6 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* C) CTA + Socials (на мобиле — ПОСЛЕ фото и по центру, на md — под текстом слева) */}
         <div className="order-3 text-white">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="mt-2 flex justify-center md:justify-start">
             <Button

@@ -31,12 +31,12 @@ export default function Publications() {
     {
       img: "/publications/publications2.png",
       label: t("publications.text2"),
-      title: t("publications.titleText2"), // ← свой ключ
+      title: t("publications.titleText2"), 
     },
     {
       img: "/publications/publications3.png",
       label: t("publications.text3"),
-      title: t("publications.titleText3"), // ← свой ключ
+      title: t("publications.titleText3"), 
     },
   ];
 

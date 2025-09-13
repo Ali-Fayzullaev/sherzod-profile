@@ -31,7 +31,6 @@ export default function Profile() {
           {t("profile.text")}
         </p>
 
-        {/* Кнопка: 100% ширина на мобилке, авто на ≥sm */}
         <div className="mt-2">
           <ButtonComponents
           href="/profile"

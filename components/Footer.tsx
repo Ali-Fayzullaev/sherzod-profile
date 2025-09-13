@@ -32,7 +32,7 @@ export default function Footer() {
     socials: t("contacts.label.socials", "Социальные сети:"),
   };
 
-  // Берём соцсети либо из contacts.socials, либо из hero.socials
+
   const socials =
     (t("contacts.socials") as any) ||
     (t("hero.socials") as any) || {
@@ -59,7 +59,6 @@ export default function Footer() {
           <div className="mt-2 h-1 w-14 rounded bg-[#0b76ad]" />
 
           <div className="mt-6 grid gap-4">
-            {/* Адрес — на всю ширину */}
             <div className="rounded-2xl border p-4 flex items-start gap-3">
               <div className="shrink-0 rounded-xl ring-1 ring-[#0b76ad]/30 p-2 text-[#0b76ad]">
                 <MapPin className="h-6 w-6" />
@@ -70,7 +69,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Три колонки ниже */}
             <div className="grid gap-4 md:grid-cols-3">
               {/* Email */}
               <div className="rounded-2xl border p-4 flex items-start gap-3">
@@ -98,7 +96,6 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Соцсети */}
               <div className="rounded-2xl border p-4">
                 <div className="font-semibold">{labels.socials}</div>
                 <div className="mt-3 flex items-center gap-3 text-slate-500">
@@ -124,7 +121,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Нижняя подпись (при необходимости) */}
           <div className="mt-8 text-center text-sm text-slate-500">
             {t("footer.copyright", "")}
           </div>

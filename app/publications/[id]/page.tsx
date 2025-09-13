@@ -7,15 +7,15 @@ import { useParams } from "next/navigation";
 import { useLang } from "@/app/context/LangProvider";
 
 const images = [
-  "publications1.png", // id = 1
-  "publications9.jpg", // id = 2
-  "publications3.png", // id = 3
-  "publications4.png", // id = 4
-  "publications5.png", // id = 5
-  "publications6.png", // id = 6
-  "publications7.png", // id = 7
-  "publications8.png", // id = 8
-  "publications2.png", // id = 9
+  "publications1.png",
+  "publications9.jpg",
+  "publications3.png",
+  "publications4.png",
+  "publications5.png",
+  "publications6.png",
+  "publications7.png",
+  "publications8.png",
+  "publications2.png",
 ] as const;
 
 export default function PublicationPage() {
@@ -30,9 +30,15 @@ export default function PublicationPage() {
       <section className="container mx-auto py-10">
         <div className="rounded border bg-white/70 backdrop-blur p-8 text-center">
           <p className="text-lg">
-            {t("activitypage.morepublication.notfound", "Публикация не найдена")}
+            {t(
+              "activitypage.morepublication.notfound",
+              "Публикация не найдена"
+            )}
           </p>
-          <Link href="/#experience" className="mt-4 inline-block text-[#0b76ad] hover:underline">
+          <Link
+            href="/#experience"
+            className="mt-4 inline-block text-[#0b76ad] hover:underline"
+          >
             {t("common.back", "Назад")}
           </Link>
         </div>
@@ -52,10 +58,11 @@ export default function PublicationPage() {
       <div className="container mx-auto">
         <div className="rounded border bg-white/70 backdrop-blur shadow-sm overflow-hidden">
           <div className="p-6 sm:p-8">
-            {/* Заголовок + навигация */}
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
+                  {title}
+                </h1>
                 <div className="mt-2 h-1 w-14 rounded bg-[#0b76ad]" />
               </div>
 
@@ -101,7 +108,7 @@ export default function PublicationPage() {
             {/* Назад к списку */}
             <div className="mt-8">
               <Link
-                href="/#experience"
+                href="/activity#publications"
                 className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm hover:bg-white/60"
               >
                 ← {t("common.back", "Назад к списку")}

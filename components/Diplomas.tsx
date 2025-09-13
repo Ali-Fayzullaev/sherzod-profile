@@ -29,7 +29,7 @@ export default function Diplomas() {
 
   return (
     <section className="w-full max-w-7xl mx-auto my-10 px-3 sm:px-0">
-      {/* ↑ на мобилке небольшие боковые отступы; на ≥sm убираем */}
+      
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
         {t("diplomas.title")}
       </h2>
@@ -61,7 +61,6 @@ export default function Diplomas() {
           ))}
         </CarouselContent>
 
-        {/* стрелки над каруселью справа */}
         <CarouselPrevious
           aria-label="Prev"
           className="
